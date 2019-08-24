@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+.content {
+    width:100%;
+    height:100vh;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.row .flex {
+    flex:1;
+    
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.column .flex {
+    flex: 1;
+    display: flex;
+}
+@font-face {
+    font-family: Karla;
+    src: url(assets/Karla/Karla-Regular.woff) format("opentype");
+}
+@font-face {
+    font-family: HKGrotesk;
+    src: url(assets/KkGrotesk/HKGrotesk-Regular.otf) format("opentype");
+}

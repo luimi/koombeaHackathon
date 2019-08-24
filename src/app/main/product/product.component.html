@@ -1,0 +1,21 @@
+<div class="card">
+    <img [src]="product.photo" class="photo">
+    <div class="column padding">
+        
+        <span>{{product.city}}</span>
+        <h1>{{product.name}}</h1>
+        <h2>Desde COP ${{product.price}}</h2>
+    </div>
+    <div class="row padding">
+        <div class="flex">
+            <img src="./assets/rating.svg" class="rate">
+            <a>{{product.rating}} ({{product.votes}})</a>
+        </div>
+        <div>
+            <img src="./assets/heart.svg" class="favorite" (click)="addFavorite()" [hidden]="isFavorite()">
+            <img src="./assets/heart-fill.svg" class="favorite" (click)="removeFavorite()" [hidden]="!isFavorite()">
+        </div>
+    </div>
+</div>
+
+

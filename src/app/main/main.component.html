@@ -1,0 +1,21 @@
+<div class="content">
+    <div class="row header">
+        <div class="row flex">
+            <span class="orderby">Ordenar</span>
+            <select [(ngModel)]="sort" (change)="getProducts()">
+                <option value="rating">Rating</option>
+                <option value="name">Nombre</option>
+                <option value="city">Ciudad</option>
+                <option value="votes">Votos</option>
+            </select>
+        </div>
+        
+        <div *ngIf="products">
+                pagina {{products.currentPage}} de {{products.numberOfPages}} |
+                <span *ngFor="let page of getArrayOfPages()" class="paginator"><a (click)="getProducts(page)" class="number" [ngClass]="{'current':page === products.currentPage}">{{page}}</a></span>
+        </div>
+    </div>
+    <div *ngIf="products" class="grid-container">
+        <app-product *ngFor="let product of products.items" [product]="product"></app-product>
+    </div>
+</div>

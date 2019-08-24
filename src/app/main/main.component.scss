@@ -1,0 +1,48 @@
+.header{
+    padding: 15px;
+    padding-top: 52px;
+    padding-left: 76px;
+    padding-right: 78px;
+    color:#99A3A4;
+    .orderby{
+        align-self: center;
+        margin-right: 25px;
+        width: 57px;
+        height: 19px;
+        font-family: Karla;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        color: #99a4a4;
+    }
+    .paginator{
+        cursor: pointer;
+        .number{
+            margin: 5px;
+        }
+        .current{
+            color:#28666B !important;
+        }
+    }
+}
+.grid-container {
+    padding-left: 76px;
+    padding-right: 78px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". . .";
+}
+app-product{
+    max-width: 300px;
+    margin-bottom: 25px;
+}
+select{
+    width: 222px;
+    height: 46px;
+    border-radius: 14px;
+    background-color: #f4f5f8;
+}
